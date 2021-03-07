@@ -11,11 +11,13 @@ namespace BankNamespace
     public class KafkaConsumerHostedService : IHostedService
     {
         private readonly ILogger<KafkaConsumerHostedService> _logger;
+        //private readonly IInterfejs inte;
         private readonly ClusterClient _cluster;
 
-        public KafkaConsumerHostedService(ILogger<KafkaConsumerHostedService> logger)
+        public KafkaConsumerHostedService(ILogger<KafkaConsumerHostedService> logger/*, IInterfejs inte*/)
         {
             _logger = logger;
+            //this.inte = inte;
             _cluster = new ClusterClient(new Configuration
             {
                 Seeds = "localhost:9093"

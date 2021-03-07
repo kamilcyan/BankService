@@ -1,6 +1,7 @@
 ﻿namespace BankNamespace
 {
-    internal interface IInterfejs
+    public interface IInterfejs
     {
+         void dupa();
     }
 }

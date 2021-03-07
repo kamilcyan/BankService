@@ -26,7 +26,7 @@ namespace BankNamespace
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
+            //services.AddScoped<IInterfejs, IImplementtaion>();
             services.AddSwaggerGen();
         }
 
