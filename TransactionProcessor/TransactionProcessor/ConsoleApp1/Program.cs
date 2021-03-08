@@ -9,18 +9,18 @@ namespace BankNamespace
     {
         static void Main(string[] args)
         {
-            try
-            {
-                var db = new PaymentContext();
-                var per = new Payment { ClientId = 0, Value = 2.00m, AccountNumberFrom = "123", AccountNumberTo = "456", Currency = "USD" };
-                db.Payments.Add(per);
-                db.SaveChanges();
-            }
-            catch (Exception ex)
-            {
+            //try
+            //{
+            //    var db = new PaymentContext();
+            //    var per = new Payment { ClientId = 0, Value = 2.00m, AccountNumberFrom = "123", AccountNumberTo = "456", Currency = "USD" };
+            //    db.Payments.Add(per);
+            //    db.SaveChanges();
+            //}
+            //catch (Exception ex)
+            //{
 
-                throw ex;
-            }
+            //    throw ex;
+            //}
 
 
 
