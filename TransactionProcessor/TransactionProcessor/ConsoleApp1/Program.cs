@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using BankNamespace.Models;
 using System;
+using Microsoft.AspNetCore.Hosting;
 
 namespace BankNamespace
 {
@@ -30,7 +31,10 @@ namespace BankNamespace
         }
 
         private static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
+            Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            })
                 .ConfigureServices((context, collection) =>
                 {
                     collection.AddHostedService<KafkaConsumerHostedService>();
